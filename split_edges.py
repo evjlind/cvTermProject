@@ -87,7 +87,6 @@ img_gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 class getSeparatedEdges():
 
     def get_edges(img):
-        ht,wd = img.shape[:2]
 
         # add padding to img
         old_image_height, old_image_width, channels = img.shape
@@ -136,8 +135,10 @@ class getSeparatedEdges():
         for i in range(len(border_coords[0])):
             x = border_coords[0]
             y = border_coords[1]
-            for i in fin_corners[0]:
-
+            for i in range(4):
+                corner = fin_corners[i]
+                
+                
 
         # plt.figure(1)
         # for i in fin_corners:
